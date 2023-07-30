@@ -197,516 +197,310 @@
       </tags>
   </entry>
   <entry>
-    <title>springBoot整合第三方技术</title>
-    <url>/post/0.html</url>
-    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#%E4%B8%80%E6%95%B4%E5%90%88MyBatis">一、整合MyBatis</a><ul>
-<li><a href="#1%E5%88%9B%E5%BB%BA%E6%96%B0%E6%A8%A1%E5%9D%97">1.创建新模块</a><ul>
-<li><a href="#%E9%80%89%E6%8B%A9spring%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF">选择spring初始化，并配置模块相关基础信息</a></li>
-</ul>
+    <title>java基础面试题</title>
+    <url>/post/df71ed7b.html</url>
+    <content><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-面向对象OOP"><a href="#1-面向对象OOP" class="headerlink" title="1. 面向对象OOP"></a>1. 面向对象OOP</h2><ul>
+<li><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3></li>
+<li><p>封装</p>
 </li>
-<li><a href="#2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">2.常见问题处理</a></li>
-</ul>
+<li><p>继承</p>
 </li>
-<li><a href="#%E4%BA%8C%E6%95%B4%E5%90%88MyBatis-Plus">二.整合MyBatis-Plus</a><ul>
-<li><a href="#1%E6%89%8B%E5%8A%A8%E6%B7%BBspringBooot%E6%95%B4%E5%90%88MybatisPlus%E5%9D%90%E6%A0%87">1.手动添springBooot整合MybatisPlus坐标</a></li>
-<li><a href="#2%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E5%B1%82%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E7%BB%A7%E6%89%BFBaseMapper">2.定义数据层接口与映射配置，继承BaseMapper</a></li>
-<li><a href="#3%E5%90%8C%E6%95%B4%E5%90%88mybatis">3.同整合mybatis</a></li>
-</ul>
+<li><p>多态</p>
+<blockquote>
+<p>指允许不同子类型的对象对同一消息作出不同的响应。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>编译时多态性</th>
+<th>运行时 多态性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法重载</td>
+<td>方法重写</td>
+</tr>
+<tr>
+<td></td>
+<td>对象造型（父类引用指向子类对象）</td>
+</tr>
+</tbody></table>
 </li>
-<li><a href="#%E4%B8%89%E6%95%B4%E5%90%88Druid">三、整合Druid</a><ul>
-<li><a href="#1%E5%AF%BC%E5%85%A5%E5%AF%B9%E5%BA%94%E7%9A%84starter">1.导入对应的starter</a></li>
-<li><a href="#2%E9%85%8D%E7%BD%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%88%96%E9%87%87%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE">2.配置对应的设置或采用默认配置</a></li>
 </ul>
-</li>
-</ul>
-<h1 id="一、整合MyBatis"><a href="#一、整合MyBatis" class="headerlink" title="一、整合MyBatis"></a>一、整合MyBatis</h1><ul>
-<li>核心配置： 数据库连接相关信息</li>
-<li>映射配置：SQL映射（XML&#x2F;注解）</li>
-</ul>
-<h2 id="1-创建新模块"><a href="#1-创建新模块" class="headerlink" title="1.创建新模块"></a>1.创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
-<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
-<li>设置数据源参数</li>
+<h2 id="2-重载和重写"><a href="#2-重载和重写" class="headerlink" title="2. 重载和重写"></a>2. 重载和重写</h2><table>
+<thead>
+<tr>
+<th align="center">重载</th>
+<th align="center">重写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">发生在同一个类内部</td>
+<td align="center">发生在父类与子类之间</td>
+</tr>
+<tr>
+<td align="center">同名方法的<strong>参数列表不同</strong></td>
+<td align="center">方法名、参数列表、返回类型和父类相同</td>
+</tr>
+<tr>
+<td align="center">可以有<strong>不同的返回类型</strong></td>
+<td align="center">访问修饰符类型大于被重写的</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><strong>多态性</strong>的一种体现</td>
+</tr>
+</tbody></table>
+<h2 id="3-equals和-x3D-x3D"><a href="#3-equals和-x3D-x3D" class="headerlink" title="3. equals和 &#x3D;&#x3D;"></a>3. equals和 &#x3D;&#x3D;</h2><table>
+<thead>
+<tr>
+<th align="center">equals</th>
+<th align="center">&#x3D;&#x3D;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Object类中的方法</td>
+<td align="center">java中的运算符</td>
+</tr>
+<tr>
+<td align="center">比较两个对象<strong>逻辑上是否相等</strong></td>
+<td align="center">比较两个<strong>操作数的值</strong>是否相等</td>
+</tr>
+<tr>
+<td align="center">比较两个对象的<strong>引用</strong>是否相等</td>
+<td align="center"><strong>基本数据类型</strong>：比较<strong>值</strong>是否相等</td>
+</tr>
+<tr>
+<td align="center">重写<code>equals</code>方法同时也要重写<code>hashcode</code>方法</td>
+<td align="center"><strong>引用数据类型</strong>：<strong>引用</strong>是否相等，即指向的对象手动是通过一个对象</td>
+</tr>
+</tbody></table>
+<h2 id="4-Object类中常用的方法"><a href="#4-Object类中常用的方法" class="headerlink" title="4. Object类中常用的方法"></a>4. Object类中常用的方法</h2><ol>
+<li>Equals</li>
+<li>Hashcode</li>
+<li>toString</li>
+<li>wait</li>
+<li>notify</li>
+<li>clone</li>
+<li>getClass</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
-
-<p>4.定义数据层接口与映射配置</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5.测试类注入接口，测试功能</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-常见问题处理"><a href="#2-常见问题处理" class="headerlink" title="2.常见问题处理"></a>2.常见问题处理</h2><ol>
-<li>MySQL 8.X驱动强制要求设置时区<ul>
-<li>修改url，添加serverTimezone设定</li>
-<li>修改MySQL数据库配置</li>
+<h2 id="5-内部类和静态内部类的区别"><a href="#5-内部类和静态内部类的区别" class="headerlink" title="5.内部类和静态内部类的区别"></a>5.内部类和静态内部类的区别</h2><table>
+<thead>
+<tr>
+<th align="center">静态内部类</th>
+<th align="center">内部类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">定义在另一个类的内部静态类</td>
+<td align="center">定义在林那个一个类的内部的类</td>
+</tr>
+<tr>
+<td align="center">与外部类是独立存在的，没有联系</td>
+<td align="center">可<strong>直接访问</strong>外部类的成员，包括<strong>私有成员</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>只能访问外部类的静态成员</strong></td>
+<td align="center">内部类持有外部类的引用</td>
+</tr>
+<tr>
+<td align="center">可以<em>直接通过类名来创建对象</em></td>
+<td align="center"><strong>必须通过外部类对象</strong>来创建内部类对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">可访问外部类的方法和属性</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">成员内部类、局部内部类、匿名内部类</td>
+</tr>
+</tbody></table>
+<h2 id="6-static关键字有什么作用"><a href="#6-static关键字有什么作用" class="headerlink" title="6.static关键字有什么作用"></a>6.static关键字有什么作用</h2><ol>
+<li>修饰内部类<ul>
+<li>修饰的类是静态内部类</li>
 </ul>
 </li>
-<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
+<li>修饰方法<ul>
+<li>静态方法</li>
+<li><strong>不能被重写</strong>，可直接使用类名来调用</li>
+</ul>
+</li>
+<li>修饰变量<ul>
+<li>静态变量</li>
+<li>被所有实例共享</li>
+</ul>
+</li>
+<li>修饰代码块<ul>
+<li>静态代码块</li>
+<li>整个<strong>类加载</strong>的时候<strong>只会执行一次</strong></li>
+<li>用来做程序优化</li>
+</ul>
+</li>
 </ol>
-<h1 id="二-整合MyBatis-Plus"><a href="#二-整合MyBatis-Plus" class="headerlink" title="二.整合MyBatis-Plus"></a>二.整合MyBatis-Plus</h1><h2 id="1-手动添springBooot整合MybatisPlus坐标"><a href="#1-手动添springBooot整合MybatisPlus坐标" class="headerlink" title="1.手动添springBooot整合MybatisPlus坐标"></a>1.手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-定义数据层接口与映射配置，继承BaseMapper"><a href="#2-定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="2.定义数据层接口与映射配置，继承BaseMapper"></a>2.定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-同整合mybatis"><a href="#3-同整合mybatis" class="headerlink" title="3.同整合mybatis"></a>3.同整合mybatis</h2><h1 id="三、整合Druid"><a href="#三、整合Druid" class="headerlink" title="三、整合Druid"></a>三、整合Druid</h1><h2 id="1-导入对应的starter"><a href="#1-导入对应的starter" class="headerlink" title="1.导入对应的starter"></a>1.导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置对应的设置或采用默认配置"><a href="#2-配置对应的设置或采用默认配置" class="headerlink" title="2.配置对应的设置或采用默认配置"></a>2.配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
+<h2 id="7-final的作用"><a href="#7-final的作用" class="headerlink" title="7.final的作用"></a>7.final的作用</h2><ol>
+<li>修饰类<ul>
+<li>修饰的类不能被继承</li>
+</ul>
+</li>
+<li>修饰方法<ul>
+<li>修饰的方法不能被重写	</li>
+<li>JVM会尝试将其内联，提高运行效率</li>
+</ul>
+</li>
+<li>修饰变量<ul>
+<li>修饰的变量不能被改变</li>
+<li>常量</li>
+<li>在编译阶段会被存入常量池中</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-StringString-StringBuffffer-和-StringBuilder-的区别是什么"><a href="#8-StringString-StringBuffffer-和-StringBuilder-的区别是什么" class="headerlink" title="8.StringString StringBuffffer 和 StringBuilder 的区别是什么"></a>8.StringString StringBuffffer 和 StringBuilder 的区别是什么</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>String</th>
+<th>StringBuffer</th>
+<th>StringBulider</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>可变性</td>
+<td>不可变</td>
+<td>可变</td>
+<td>可变</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>较差</td>
+<td>中等（受同步机制影响）</td>
+<td>最佳</td>
+</tr>
+<tr>
+<td>字符串拼接</td>
+<td>创建多个中间String对象</td>
+<td>修改通过一个StringBuffer对象</td>
+<td>修改通过一个StringBulider对象</td>
+</tr>
+<tr>
+<td>线程安全性</td>
+<td>线程安全</td>
+<td>线程安全</td>
+<td>线程不安全</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>不经常修改字符串内容</td>
+<td>需频繁修改字符串内容</td>
+<td>需频繁修改字符串内容</td>
+</tr>
+</tbody></table>
+<p><strong>String</strong>：</p>
+<ol>
+<li>String是不可变的，一旦创建就不能修改其值。（<strong>只读字符串</strong>）</li>
+<li>对于每次针对String的修改操作，实际上是<strong>创建了一个新的String对象</strong>。</li>
+<li>字符串拼接使用”+”操作符时，会创建多个中间String对象，性能较低。</li>
+<li>String适用于在<code>不经常修改字符串内容</code>的场景，例如字符串常量、方法参数等。</li>
+<li>String类是线程安全的，可以保证多个线程同时读取一个字符串时不会出现问题。</li>
+</ol>
+<p><strong>StringBuffer</strong>：</p>
+<ol>
+<li>StringBuffer是可变的，可以修改其值。</li>
+<li>对于每次针对StringBuffer的修改操作，不会创建新的StringBuffer对象，而是<strong>在原字符串缓冲区</strong>上进行修改。</li>
+<li>字符串拼接时，不会创建多个中间的String对象，性能较高。</li>
+<li>StringBuffer适用于需要频繁修改字符串内容的场景，例如循环拼接字符串、多线程下的字符串操作等。</li>
+<li>StringBuffer类是线程安全的，提供了<strong>同步的方法</strong>，可以在<strong>多线程</strong>环境下使用。(<strong>Synchronized</strong>)</li>
+</ol>
+<h3 id="StrigBuffer是如何实现线程安全的"><a href="#StrigBuffer是如何实现线程安全的" class="headerlink" title="StrigBuffer是如何实现线程安全的"></a>StrigBuffer是如何实现线程安全的</h3><blockquote>
+<ol>
+<li>StringBuffer通过内部使用同步机制来实现线程安全的</li>
+<li>具体来说，就是它的每个方法上都使用了<code>synchronized</code>关键字，以<strong>确保在同一时间只有一个线程可以访问和修改StrigBuffer对象</strong></li>
+</ol>
+</blockquote>
+<p><strong>StringBuilder</strong>：</p>
+<ol>
+<li>StringBuilder和StringBuffer一样也是可变的，可以修改其值。</li>
+<li>StringBuilder相比于StringBuffer，不进行同步，因此效率更高。</li>
+<li>字符串拼接时，不会创建多个中间的String对象，性能最高。</li>
+<li>StringBuilder适用于在<strong>单线程</strong>环境下频繁修改字符串内容的场景。</li>
+<li>StringBuilder类不是线程安全的，不提供同步的方法。</li>
+</ol>
+<h2 id="9-Super和this表示什么？"><a href="#9-Super和this表示什么？" class="headerlink" title="9.Super和this表示什么？"></a>9.Super和this表示什么？</h2><ul>
+<li><strong>super</strong>:表示当前类的父类对象</li>
+<li><strong>this</strong>：表示当前类对象</li>
+</ul>
+<h2 id="10-抽象类和接口的区别"><a href="#10-抽象类和接口的区别" class="headerlink" title="10. 抽象类和接口的区别"></a>10. 抽象类和接口的区别</h2><table>
+<thead>
+<tr>
+<th align="center">特征</th>
+<th align="center">抽象类</th>
+<th align="center">接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">定义</td>
+<td align="center">一个包含抽象方法的类</td>
+<td align="center">一个行为规范的集合，描述了一个对象应该具有的方法</td>
+</tr>
+<tr>
+<td align="center">关键字</td>
+<td align="center"><code>abstract</code></td>
+<td align="center"><code>interface</code></td>
+</tr>
+<tr>
+<td align="center">实例化</td>
+<td align="center"><strong>不能直接实例化</strong>，需要通过创建子类并<strong>实现所有抽象方法</strong>后才能创建对象</td>
+<td align="center">不能直接实例化，需要通过<strong>实现接口的类</strong>来创建对象</td>
+</tr>
+<tr>
+<td align="center">方法</td>
+<td align="center">可以包含普通方法和抽象方法</td>
+<td align="center">只能包含抽象方法和默认方法</td>
+</tr>
+<tr>
+<td align="center">继承</td>
+<td align="center">子类可以继承一个抽象类，并且可以扩展其属性和方法</td>
+<td align="center">一个类可以实现多个接口，并且可以<strong>在接口之间进行多重继承</strong></td>
+</tr>
+<tr>
+<td align="center">实现限制</td>
+<td align="center">一个类只能继承一个抽象类</td>
+<td align="center">接口没有字段或实例变量，只能定义常量</td>
+</tr>
+</tbody></table>
+<p><strong>总结</strong>：抽象类是一个类的抽象形式，可以包含普通方法和抽象方法，而接口是一个行为规范的集合，只能包含抽象方法和默认方法。一个类可以继承一个抽象类，但可以实现多个接口。抽象类的目的是为了<strong>提供代码的复用性和继承关系的建立</strong>，而接口的目的是<strong>为了实现多态和行为规范的一致性</strong></p>
+<h2 id="11-java创建对象有几种方式？"><a href="#11-java创建对象有几种方式？" class="headerlink" title="11. java创建对象有几种方式？"></a>11. java创建对象有几种方式？</h2><ol>
+<li>new 创建新对象</li>
+<li>通过反射机制</li>
+<li>采用clone机制</li>
+<li>通过序列化机制</li>
+</ol>
+<h2 id="12-深拷贝和浅拷贝的区别是什么"><a href="#12-深拷贝和浅拷贝的区别是什么" class="headerlink" title="12.深拷贝和浅拷贝的区别是什么"></a>12.深拷贝和浅拷贝的区别是什么</h2><p><strong>浅拷贝</strong>： 仅仅复制所考虑的对象，而不是复制它所引用的对象</p>
+<p><strong>深拷贝</strong>： 深拷贝要把要复制的对象所有引用的对象都复制了一遍</p>
+<h2 id="13-在使用jdbc时，如何防止SQL注入"><a href="#13-在使用jdbc时，如何防止SQL注入" class="headerlink" title="13.在使用jdbc时，如何防止SQL注入"></a>13.在使用jdbc时，如何防止SQL注入</h2><p>使用<code>PrepareStatement</code>,而不是使用<code>Statement</code></p>
+<p><strong>PreparedStatement</strong>：</p>
+<ol>
+<li><strong>预编译</strong>：PreparedStatement使用预编译技术，将SQL查询语句在执行之前进行编译。这样可以提高查询的性能，特别是当需要多次执行相同的SQL语句时。</li>
+<li>参数化查询：PreparedStatement支持参数化查询，可以在SQL语句中使用<strong>占位符（?）</strong>代表输入参数，然后使用set方法将具体的参数值设置到对应的占位符中。</li>
+<li>防止SQL注入：由于参数化查询，PreparedStatement对于防止SQL注入攻击提供了更好的保护。参数值被视为纯数据，而不是SQL代码的一部分，因此不会被误解释为可执行的SQL语句。</li>
+<li>可读性和维护性：由于使用了占位符，PreparedStatement通常比较易读且易于维护，可以在SQL语句和参数值之间进行更清晰的分离。</li>
+</ol>
+<p><strong>Statement</strong>：</p>
+<ol>
+<li><strong>即时编译</strong>：Statement在执行SQL查询之前会进行即时编译，每次执行都需要重新编译一次SQL语句。</li>
+<li>字符串拼接：Statement通常使用<strong>字符串拼接</strong>的方式将参数值直接嵌入到SQL语句中，这样<strong>容易导致SQL注入攻击</strong>，因为恶意输入可能会被解释为SQL代码。</li>
+<li>灵活性：由于没有占位符的支持，Statement在构建SQL查询时更加灵活。可以直接在SQL语句中嵌入参数值和SQL代码。</li>
+<li>性能：由于没有预编译的过程，Statement在某些情况下可能会比PreparedStatement的执行速度稍慢。特别是在需要多次执行相同的SQL语句时，Statement可能会导致每次执行都进行语法解析和优化。</li>
+</ol>
+<h2 id="14-什么是连接池？"><a href="#14-什么是连接池？" class="headerlink" title="14.什么是连接池？"></a>14.什么是连接池？</h2><blockquote>
+<p>连接池是用来分配、管理、释放数据库连接的。</p>
+</blockquote>
+<p>可以使应用程序<strong>重复使用同一个数据库连接</strong>，而不是每次都创建一个新的数据库连接。</p>
+<p>通过释放空闲时间较长的数据库连接避免数据库因为创建太多的连接而造成的连接遗漏<br>问题，提高了程序性能。</p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>面试 - java - 面试题</category>
       </categories>
-      <tags>
-        <tag>博客笔记</tag>
-        <tag>sppringBoot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于springBoot的SSMP整合案例</title>
-    <url>/post/29c5a7c0.html</url>
-    <content><![CDATA[<h1 id="基于springBoot的SSMP整合案例"><a href="#基于springBoot的SSMP整合案例" class="headerlink" title="基于springBoot的SSMP整合案例"></a>基于springBoot的SSMP整合案例</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#SSMP%E6%95%B4%E5%90%88%E6%A1%88%E4%BE%8B">SSMP整合案例</a><ul>
-<li><a href="#0%E6%A8%A1%E5%9D%97%E5%88%9B%E5%BB%BA">0.模块创建</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%80%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%BC%80%E5%8F%91">一.实体类开发</a><ul>
-<li><a href="#1%E5%86%99%E4%B8%AA%E5%AE%9E%E4%BD%93%E7%B1%BB">1.写个实体类</a><ul>
-<li><a href="#Lombok">Lombok</a></li>
-<li><a href="#%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%88%B6%E4%BD%9C">实体类制作</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8lombok%E7%AE%80%E5%8C%96%E5%BC%80%E5%8F%91">使用lombok简化开发</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%BA%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%BC%80%E5%8F%91">二、数据类开发</a><ul>
-<li><a href="#%E5%9F%BA%E7%A1%80CRUD">基础CRUD</a><ul>
-<li><a href="#1%E5%AF%BC%E5%85%A5%E4%BE%9D%E8%B5%96%E9%A9%B1%E5%8A%A8">1.导入依赖驱动</a></li>
-<li><a href="#2%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE">2.配置数据源配置</a></li>
-<li><a href="#3%E4%BD%BF%E7%94%A8MP%E7%9A%84%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%8E%A5%E5%8F%A3BaseMapper%E5%8A%A0%E9%80%9F%E5%BC%80%E5%8F%91">3.使用MP的标准通用接口BaseMapper加速开发</a></li>
-<li><a href="#4%E5%88%B6%E4%BD%9C%E6%B5%8B%E8%AF%95%E7%B1%BB%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C">4.制作测试类测试结果</a></li>
-<li><a href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA">温馨提示</a></li>
-<li><a href="#%E6%9F%A5%E7%9C%8BMP%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97">查看MP运行日志</a></li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD%E5%88%B6%E4%BD%9C">分页功能制作</a><ul>
-<li><a href="#%E5%AE%9A%E4%B9%89MP%E6%8B%A6%E6%88%AA%E5%99%A8%E5%B9%B6%E5%B0%86%E5%85%B6%E8%AE%BE%E7%BD%AE%E4%B8%BASpring%E7%AE%A1%E6%8E%A7%E7%9A%84bean">定义MP拦截器并将其设置为Spring管控的bean</a></li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-</ul>
-</li>
-<li><a href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E5%8A%9F%E8%83%BD">条件查询功能</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E4%B8%9A%E5%8A%A1%E5%B1%82%E5%BC%80%E5%8F%91">三、业务层开发</a><ul>
-<li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91">快速开发</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%9B%E8%A1%A8%E7%8E%B0%E5%B1%82%E5%BC%80%E5%8F%91">四、表现层开发</a><ul>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-<li><a href="#%E8%A1%A8%E7%8E%B0%E5%B1%82%E6%B6%88%E6%81%AF%E4%B8%80%E8%87%B4%E6%80%A7%E5%A4%84%E7%90%86">表现层消息一致性处理</a><ul>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%BA%94%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E9%80%9A%E6%B5%8B%E8%AF%95">五、前后端联通测试</a></li>
-<li><a href="#%E5%85%AD%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91">六、页面基础功能开发</a><ul>
-<li><a href="#1%E5%88%97%E8%A1%A8%E5%8A%9F%E8%83%BD%E9%9D%9E%E5%88%86%E9%A1%B5%E7%89%88">1.列表功能（非分页版）</a><ul>
-<li><a href="#%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89">页面数据模型定义</a></li>
-<li><a href="#%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE">异步请求获取数据</a></li>
-</ul>
-</li>
-<li><a href="#2%E6%B7%BB%E5%8A%A0%E5%8A%9F%E8%83%BD">2.添加功能</a></li>
-<li><a href="#3%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD">3.删除功能</a></li>
-<li><a href="#4%E4%BF%AE%E6%94%B9%E5%8A%9F%E8%83%BD">4.修改功能</a></li>
-<li><a href="#5%E4%B8%9A%E5%8A%A1%E6%B6%88%E6%81%AF%E4%B8%80%E8%87%B4%E6%80%A7%E5%A4%84%E7%90%86">5.业务消息一致性处理</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%83%E9%A1%B5%E9%9D%A2-%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91">七、页面 功能开发</a><ul>
-<li><a href="#1%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD">1.分页功能</a></li>
-<li><a href="#2%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD%E7%BB%B4%E6%8A%A4">2.删除功能维护</a></li>
-<li><a href="#3%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E5%8A%9F%E8%83%BD">3.条件查询功能</a><ul>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="SSMP整合案例"><a href="#SSMP整合案例" class="headerlink" title="SSMP整合案例"></a>SSMP整合案例</h1><ol>
-<li>实体类开发————使用Lombok快速制作实体类</li>
-<li>Dao开发————整合MyBatisPlus，制作数据层测试</li>
-<li>Service开发————基于MyBatisPlus进行增量开发，制作业务层测试类</li>
-<li>Controller开发————基于Restful开发，使用PostMan测试接口功能</li>
-<li>Controller开发————前后端开发协议制作</li>
-<li>页面开发————基于VUE+ElementUI制作，前后端联调，页面数据处理，页面消息处理<ul>
-<li>列表</li>
-<li>新增</li>
-<li>修改</li>
-<li>删除</li>
-<li>分页</li>
-<li>查询</li>
-</ul>
-</li>
-<li>项目异常处理</li>
-<li>按条件查询————页面功能调整、Controller修正功能、Service修正功能</li>
-</ol>
-<p>&amp;#x20;</p>
-<h2 id="0-模块创建"><a href="#0-模块创建" class="headerlink" title="0.模块创建"></a>0.模块创建</h2><p>创建一个新的模块，加载要使用的技术对应的starter，修改配置文件格式为yml格式</p>
-<h1 id="一-实体类开发"><a href="#一-实体类开发" class="headerlink" title="一.实体类开发"></a>一.实体类开发</h1><h2 id="1-写个实体类"><a href="#1-写个实体类" class="headerlink" title="1.写个实体类"></a>1.写个实体类</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Book</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String type;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String description;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Lombok"><a href="#Lombok" class="headerlink" title="Lombok"></a>Lombok</h3><p>使用lombok可以通过一个注解@Data完成一个实体类对应的getter，setter，toString，equals，hashCode等操作的快速添加</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@ToString</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="实体类制作"><a href="#实体类制作" class="headerlink" title="实体类制作"></a>实体类制作</h3><h3 id="使用lombok简化开发"><a href="#使用lombok简化开发" class="headerlink" title="使用lombok简化开发"></a>使用lombok简化开发</h3><ul>
-<li>导入lombok无需指定版本，由SpringBoot提供版本</li>
-<li>@Data注解</li>
-</ul>
-<h1 id="二、数据类开发"><a href="#二、数据类开发" class="headerlink" title="二、数据类开发"></a>二、数据类开发</h1><p>使用MyBatisPlus技术，数据源使用前面学习的Druid</p>
-<h2 id="基础CRUD"><a href="#基础CRUD" class="headerlink" title="基础CRUD"></a>基础CRUD</h2><h3 id="1-导入依赖驱动"><a href="#1-导入依赖驱动" class="headerlink" title="1.导入依赖驱动"></a>1.导入依赖驱动</h3><p>MyBatisPlus技术，数据源使用前面学习的Druid</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-配置数据源配置"><a href="#2-配置数据源配置" class="headerlink" title="2.配置数据源配置"></a>2.配置数据源配置</h3><p>yml文件</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 80</span><br><span class="line"></span><br><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 1123456</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-使用MP的标准通用接口BaseMapper加速开发"><a href="#3-使用MP的标准通用接口BaseMapper加速开发" class="headerlink" title="3.使用MP的标准通用接口BaseMapper加速开发"></a>3.使用MP的标准通用接口BaseMapper加速开发</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface BookDao extends BaseMapper<span class="tag">&lt;<span class="name">Book</span>&gt;</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-制作测试类测试结果"><a href="#4-制作测试类测试结果" class="headerlink" title="4.制作测试类测试结果"></a>4.制作测试类测试结果</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoTestCase</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetById</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(bookDao.selectById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testSave</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookDao.insert(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testUpdate</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setId(<span class="number">17</span>);</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据abcdefg&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookDao.updateById(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testDelete</span><span class="params">()</span>&#123;</span><br><span class="line">        bookDao.deleteById(<span class="number">16</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetAll</span><span class="params">()</span>&#123;</span><br><span class="line">        bookDao.selectList(<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a><strong>温馨提示</strong></h3><p>MP技术默认的主键生成策略为雪花算法，生成的主键ID长度较大，和目前的数据库设定规则不相符，需要配置一下使MP使用数据库的主键生成策略，方式嘛还是老一套，做配置。在application.yml中添加对应配置即可，具体如下</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 80</span><br><span class="line"></span><br><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm_db</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br><span class="line"></span><br><span class="line">mybatis-plus:</span><br><span class="line">  global-config:</span><br><span class="line">    db-config:</span><br><span class="line">      table-prefix: tbl_    #设置表名通用前缀</span><br><span class="line">      id-type: auto        #设置主键id字段的生成策略为参照数据库设定的策略，当前数据库设置id生成策略为自增</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看MP运行日志"><a href="#查看MP运行日志" class="headerlink" title="查看MP运行日志"></a>查看MP运行日志</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis-plus:</span><br><span class="line">  global-config:</span><br><span class="line">    db-config:</span><br><span class="line">      table-prefix: tbl_</span><br><span class="line">      id-type: auto</span><br><span class="line">  configuration:</span><br><span class="line">    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>总结</strong></p>
-<ol>
-<li>手工导入starter坐标（2个），mysql驱动（1个）</li>
-<li>配置数据源与MyBatisPlus对应的配置</li>
-<li>开发Dao接口（继承BaseMapper）</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>制作测试类测试Dao功能是否有效</li>
-<li>使用配置方式开启日志，设置日志输出方式为标准输出即可查阅SQL执行日志</li>
-</ol>
-<h2 id="分页功能制作"><a href="#分页功能制作" class="headerlink" title="分页功能制作"></a>分页功能制作</h2><p>MP提供的分页操作API如下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">    bookDao.selectPage(page, <span class="literal">null</span>);</span><br><span class="line">    System.out.println(page.getCurrent());</span><br><span class="line">    System.out.println(page.getSize());</span><br><span class="line">    System.out.println(page.getTotal());</span><br><span class="line">    System.out.println(page.getPages());</span><br><span class="line">    System.out.println(page.getRecords());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>seletPage</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">   <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">   bookDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p>创建此对象时就需要指定分页的两个基本数据</p>
-<ul>
-<li>当前显示第几页</li>
-<li>当前页有几条数据</li>
-</ul>
-<p>可以通过创建Page对象时利用构造方法初始化这两个数据</p>
-<p><code>IPage page = new Page(2,5);</code></p>
-<p>将该对象传入到查询方法selectPage后，可以得到查询结果，但是我们会发现当前操作查询结果返回值仍然是一个IPage对象，这又是怎么回事？</p>
-<p><code>IPage page = bookDao.selectPage(page, null);IPage page = bookDao.selectPage(page, null);</code></p>
-<p>原来这个IPage对象中封装了若干个数据，而查询的结果作为IPage对象封装的一个数据存在的</p>
-<h3 id="定义MP拦截器并将其设置为Spring管控的bean"><a href="#定义MP拦截器并将其设置为Spring管控的bean" class="headerlink" title="定义MP拦截器并将其设置为Spring管控的bean"></a><strong>定义MP拦截器并将其设置为Spring管控的bean</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MPConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>上述代码第一行是创建MP的拦截器栈，这个时候拦截器栈中没有具体的拦截器，第二行是初始化了分页拦截器，并添加到拦截器栈中。如果后期开发其他功能，需要添加全新的拦截器，按照第二行的格式继续add进去新的拦截器就可以了。</p>
-</blockquote>
-<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol>
-<li>使用IPage封装分页数据</li>
-<li>分页操作依赖MyBatisPlus分页拦截器实现功能</li>
-<li>借助MyBatisPlus日志查阅执行SQL语句</li>
-</ol>
-<h2 id="条件查询功能"><a href="#条件查询功能" class="headerlink" title="条件查询功能"></a>条件查询功能</h2><ul>
-<li>使用QeryWrapper对象封装查询条件推荐使用LambdaQuery  W rapper对象</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">testGetBy2</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;1&quot;</span>;</span><br><span class="line">    LambdaQueryWrapper&lt;Book&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;Book&gt;();</span><br><span class="line">    <span class="comment">//if(name != null) lqw.like(Book::getName,name);    //方式一：JAVA代码控制</span></span><br><span class="line">    lqw.like(name != <span class="literal">null</span>,Book::getName,name);        <span class="comment">//方式二：API接口提供控制开关</span></span><br><span class="line">    bookDao.selectList(lqw);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>支持动态拼写查询条件</li>
-</ul>
-<p><code>lqw.like(``String.isNotEmpty(name)``,Book: :getName,&quot;Spring&quot;);</code></p>
-<p><strong>总结</strong></p>
-<ol>
-<li>使用QueryWrapper对象封装查询条件</li>
-<li>推荐使用LambdaQueryWrapper对象</li>
-<li>所有查询操作封装成方法调用</li>
-<li>查询条件支持动态条件拼装</li>
-</ol>
-<h1 id="三、业务层开发"><a href="#三、业务层开发" class="headerlink" title="三、业务层开发"></a>三、业务层开发</h1><blockquote>
-<p>📌组织业务逻辑功能，并根据业务需求，对数据持久层发起调用</p>
-</blockquote>
-<blockquote>
-<p>业务层的方法名定义一定要与业务有关，例如登录操作</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">login(String username,String password);</span><br></pre></td></tr></table></figure>
-
-<p>业务层接口定义如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookService</span> &#123;</span><br><span class="line">    Boolean <span class="title function_">save</span><span class="params">(Book book)</span>;</span><br><span class="line">    Boolean <span class="title function_">update</span><span class="params">(Book book)</span>;</span><br><span class="line">    Boolean <span class="title function_">delete</span><span class="params">(Integer id)</span>;</span><br><span class="line">    Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">    List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span>;</span><br><span class="line">    IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="type">int</span> currentPage,<span class="type">int</span> pageSize)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>业务层实现类如下，转调数据层即可</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">BookService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(Book book)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.insert(book) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">update</span><span class="params">(Book book)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.updateById(book) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.deleteById(id) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectById(id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectList(<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="type">int</span> currentPage, <span class="type">int</span> pageSize)</span> &#123;</span><br><span class="line">        <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(currentPage,pageSize);</span><br><span class="line">        bookDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>业务层接口进行测试，测试类如下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookService  bookService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetById</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(bookService.getById(<span class="number">4</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testSave</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookService.save(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testUpdate</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setId(<span class="number">10</span>);</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据abcd&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookService.update(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testDelete</span><span class="params">()</span>&#123;</span><br><span class="line">        bookService.delete(<span class="number">13</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span>  <span class="title function_">testGetAll</span><span class="params">()</span>&#123;</span><br><span class="line">        bookService.getAll();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">       IPage&lt;Book&gt; page =bookService.getPage(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(page.getCurrent());</span><br><span class="line">        System.out.println(page.getSize());</span><br><span class="line">        System.out.println(page.getTotal());</span><br><span class="line">        System.out.println(page.getPages());</span><br><span class="line">        System.out.println(page.getRecords());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>Service接口名称定义成业务名称，并与Dao接口名称进行区分</li>
-<li>制作测试类测试Service功能是否有效</li>
-</ol>
-<h2 id="快速开发"><a href="#快速开发" class="headerlink" title="快速开发"></a>快速开发</h2><p>其实MP技术不仅提供了数据层快速开发方案，业务层MP也给了一个通用接口，个人观点不推荐使用，凑合能用吧，其实就是一个封装+继承的思想，代码给出，实际开发慎用</p>
-<p>业务层接口快速开发</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IBookService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;Book&gt; &#123;</span><br><span class="line">    <span class="comment">//添加非通用操作API接口</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>业务层接口实现类快速开发，关注继承的类需要传入两个泛型，一个是数据层接口，另一个是实体类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;BookDao, Book&gt; <span class="keyword">implements</span> <span class="title class_">IBookService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line">  <span class="comment">//添加非通用操作API</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>使用通用接口（ISerivce&lt;T&gt;）快速开发Service</li>
-<li>使用通用实现类（ServiceImpl&lt;M,T&gt;）快速开发ServiceImpl</li>
-<li>可以在通用接口基础上做功能重载或功能追加</li>
-<li>注意重载时不要覆盖原始操作，避免原始提供的功能丢失</li>
-</ol>
-<h1 id="四、表现层开发"><a href="#四、表现层开发" class="headerlink" title="四、表现层开发"></a>四、表现层开发</h1><p>基于Restful的表现层接口开发，功能测试通过Postman工具进行</p>
-<p>表现层接口如下:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/books&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBookService bookService;</span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bookService.list();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.save(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PutMapping</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.modify(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.delete(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.getById(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.getPage(currentPage,pageSize);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a><strong>总结</strong></h3><ol>
-<li>基于Restful制作表现层接口<ul>
-<li>新增：POST</li>
-<li>删除：DELETE</li>
-<li>修改：PUT</li>
-<li>查询：GET</li>
-</ul>
-</li>
-<li>接收参数<ul>
-<li>实体数据：@RequestBody</li>
-<li>路径变量：@PathVariable</li>
-</ul>
-</li>
-</ol>
-<h2 id="表现层消息一致性处理"><a href="#表现层消息一致性处理" class="headerlink" title="表现层消息一致性处理"></a>表现层消息一致性处理</h2><p>目前我们通过Postman测试后业务层接口功能时通的，但是这样的结果给到前端开发者会出现一个小问题。不同的操作结果所展示的数据格式差异化严重</p>
-<p>每种不同操作返回的数据格式都不一样，而且还不知道以后还会有什么格式，这样的结果让前端人员看了是很容易让人崩溃的，必须将所有操作的操作结果数据格式统一起来，需要设计表现层返回结果的模型类，用于后端与前端进行数据格式统一，也称为<strong>前后端数据协议</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">R</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Boolean flag;</span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中flag用于标识操作是否成功，data用于封装操作数据，现在的数据格式就变了</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;flag&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;data&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;type&quot;</span>: <span class="string">&quot;计算机理论&quot;</span>,</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Spring实战 第5版&quot;</span>,</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Spring入门经典教程&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>表现层开发格式也需要转换一下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/books&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookController</span> &#123;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBookService bookService;</span><br><span class="line">   <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getAll</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.list());</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line"><span class="comment">//       R r =new R();</span></span><br><span class="line"><span class="comment">//       boolean flag =  bookService.save(book);</span></span><br><span class="line"><span class="comment">//       r.setFlag(flag);</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.save(book));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@PutMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.modify(book));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.delete(id));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getById</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>   <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.getById(id));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize)</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span>   <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,getPage(currentPage,pageSize));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a><strong>总结</strong></h4><ol>
-<li>设计统一的返回值结果类型便于前端开发读取数据</li>
-<li>返回值结果类型可以根据需求自行设定，没有固定格式</li>
-<li>返回值结果模型类用于后端与前端进行数据格式统一，也称为前后端数据协议</li>
-</ol>
-<h1 id="五、前后端联通测试"><a href="#五、前后端联通测试" class="headerlink" title="五、前后端联通测试"></a>五、前后端联通测试</h1><p>后端的表现层接口开发完毕，就可以进行前端的开发了</p>
-<p>将前端人员开发的页面保存到lresources目录下的static目录中，建议执行maven的clean生命周期，避免缓存的问题出现。</p>
-<ul>
-<li>在进行具体的功能开发之前，先做联通性的测试，通过页面发送异步提交（axios），这一步调试通过后再进行进一步的功能开发</li>
-<li></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//列表</span></span><br><span class="line">getAll() &#123;</span><br><span class="line">  axios.get(<span class="string">&quot;/books&quot;</span>).then((res)=&gt;&#123;</span><br><span class="line">    console.log(res.data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>只要后台代码能够正常工作，前端能够在日志中接收到数据，就证明前后端是通的，也就可以进行下一步的功能开发了</li>
-</ul>
-<p><strong>总结</strong></p>
-<ol>
-<li>单体项目中页面放置在resources&#x2F;static目录下</li>
-<li>created钩子函数用于初始化页面时发起调用</li>
-<li>页面使用axios发送异步请求获取数据后确认前后端是否联通</li>
-</ol>
-<h1 id="六、页面基础功能开发"><a href="#六、页面基础功能开发" class="headerlink" title="六、页面基础功能开发"></a>六、页面基础功能开发</h1><h3 id="1-列表功能（非分页版）"><a href="#1-列表功能（非分页版）" class="headerlink" title="1.列表功能（非分页版）"></a>1.列表功能（非分页版）</h3><p>列表功能主要操作就是加载完数据，将数据展示到页面上，此处要利用VUE的数据模型绑定，发送请求得到数据，然后页面上读取指定数据即可</p>
-<h4 id="页面数据模型定义"><a href="#页面数据模型定义" class="headerlink" title="页面数据模型定义"></a><strong>页面数据模型定义</strong></h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">data:&#123;</span><br><span class="line">  dataList: [],<span class="comment">//当前页要展示的列表数据</span></span><br><span class="line">  ...</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<h4 id="异步请求获取数据"><a href="#异步请求获取数据" class="headerlink" title="异步请求获取数据"></a>异步请求获取数据</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//列表</span></span><br><span class="line">getAll() &#123;</span><br><span class="line">    axios.get(<span class="string">&quot;/books&quot;</span>).then((res)=&gt;&#123;</span><br><span class="line">        <span class="built_in">this</span>.dataList = res.data.data;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>这样在页面加载时就可以获取到数据，并且由VUE将数据展示到页面上了</p>
-<p>总结：</p>
-<ol>
-<li>将查询数据返回到页面，利用前端数据绑定进行数据展示</li>
-</ol>
-<h3 id="2-添加功能"><a href="#2-添加功能" class="headerlink" title="2.添加功能"></a>2.添加功能</h3><blockquote>
-<p>添加功能用于收集数据的表单是通过一个弹窗展示的，因此在添加操作前首先要进行弹窗的展示，添加后隐藏弹窗即可。因为这个弹窗一直存在，因此当页面加载时首先设置这个弹窗为不可显示状态，需要展示，切换状态即可</p>
-</blockquote>
-<p><strong>默认状态</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data:&#123;</span><br><span class="line">  dialogFormVisible: false,//添加表单是否可见</span><br><span class="line">  ...</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>切换为显示状态</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//弹出添加窗口</span><br><span class="line">handleCreate() &#123;</span><br><span class="line">  this.dialogFormVisible = true;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>由于每次添加数据都是使用同一个弹窗录入数据，所以每次操作的痕迹将在下一次操作时展示出来，需要在每次操作之前清理掉上次操作的痕迹</p>
-</blockquote>
-<p><strong>定义清理数据操作</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重置表单</span></span><br><span class="line"><span class="title function_">resetForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">formData</span> = &#123;&#125;;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>切换弹窗状态时清理数据</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//弹出添加窗口</span></span><br><span class="line"><span class="title function_">handleCreate</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">true</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">resetForm</span>();</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>添加操作</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line">handleAdd () &#123;</span><br><span class="line">    <span class="comment">//发送异步请求</span></span><br><span class="line">    axios.<span class="title function_">post</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层，显示数据</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;添加成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;添加失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>将要保存的数据传递到后台，通过post请求的第二个参数传递json数据到后台</li>
-<li>根据返回的操作结果决定下一步操作<ul>
-<li>如何是true就关闭添加窗口，显示添加成功的消息</li>
-<li>如果是false保留添加窗口，显示添加失败的消息</li>
-</ul>
-</li>
-<li>无论添加是否成功，页面均进行刷新，动态加载数据（对getAll操作发起调用）</li>
-</ol>
-<p><strong>取消添加操作</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取消</span></span><br><span class="line"><span class="title function_">cancel</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">info</span>(<span class="string">&quot;操作取消&quot;</span>);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>请求方式使用POST调用后台对应操作</li>
-<li>添加操作结束后动态刷新页面加载数据</li>
-<li>根据操作结果不同，显示对应的提示信息</li>
-<li>弹出添加Div时清除表单数据</li>
-</ol>
-<h3 id="3-删除功能"><a href="#3-删除功能" class="headerlink" title="3.删除功能"></a>3.删除功能</h3><blockquote>
-<p>模仿添加操作制作删除功能，差别之处在于删除操作仅传递一个待删除的数据id到后台即可</p>
-</blockquote>
-<p><strong>删除操作</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="title function_">handleDelete</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    axios.<span class="title function_">delete</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>删除操作提示信息</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="title function_">handleDelete</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    <span class="comment">//1.弹出提示框</span></span><br><span class="line">    <span class="variable language_">this</span>.$confirm(<span class="string">&quot;此操作永久删除当前数据，是否继续？&quot;</span>,<span class="string">&quot;提示&quot;</span>,&#123;</span><br><span class="line">        <span class="attr">type</span>:<span class="string">&#x27;info&#x27;</span></span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//2.做删除业务</span></span><br><span class="line">        axios.<span class="title function_">delete</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">           <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">              <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//3.取消删除</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">info</span>(<span class="string">&quot;取消删除操作&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;，  </span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>请求方式使用Delete调用后台对应操作</li>
-<li>删除操作需要传递当前行数据对应的id值到后台</li>
-<li>删除操作结束后动态刷新页面加载数据</li>
-<li>根据操作结果不同，显示对应的提示信息</li>
-<li>删除操作前弹出提示框避免误操作</li>
-</ol>
-<h3 id="4-修改功能"><a href="#4-修改功能" class="headerlink" title="4.修改功能"></a>4.修改功能</h3><p>修改功能可以说是列表功能、删除功能与添加功能的合体</p>
-<p>几个相似点如下：</p>
-<ol>
-<li><p>页面也需要有一个弹窗用来加载修改的数据，这一点与添加相同，都是要弹窗</p>
-</li>
-<li><p>弹出窗口中要加载待修改的数据，而数据需要通过查询得到，这一点与查询全部相同，都是要查数据</p>
-</li>
-<li><p>查询操作需要将要修改的数据id发送到后台，这一点与删除相同，都是传递id到后台</p>
-</li>
-<li><p>查询得到数据后需要展示到弹窗中，这一点与查询全部相同，都是要通过数据模型绑定展示数据</p>
-</li>
-<li><p>修改数据时需要将被修改的数据传递到后台，这一点与添加相同，都是要传递数据</p>
-<p>所以整体上来看，修改功能就是前面几个功能的大合体</p>
-</li>
-</ol>
-<p><strong>查询并展示数据</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//弹出编辑窗口</span></span><br><span class="line"><span class="title function_">handleUpdate</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="comment">//展示弹层，加载数据</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">formData</span> = res.<span class="property">data</span>.<span class="property">data</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible4Edit</span> = <span class="literal">true</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;数据同步失败，自动刷新&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>修改操作</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//修改</span></span><br><span class="line"><span class="title function_">handleEdit</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">put</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层并刷新页面</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible4Edit</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;修改成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;修改失败，请重试&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>加载要修改数据通过传递当前行数据对应的id值到后台查询数据（同删除与查询全部）</li>
-<li>利用前端双向数据绑定将查询到的数据进行回显（同查询全部）</li>
-<li>请求方式使用PUT调用后台对应操作（同新增传递数据）</li>
-<li>修改操作结束后动态刷新页面加载数据（同新增）</li>
-<li>根据操作结果不同，显示对应的提示信息（同新增）</li>
-</ol>
-<h3 id="5-业务消息一致性处理"><a href="#5-业务消息一致性处理" class="headerlink" title="5.业务消息一致性处理"></a>5.业务消息一致性处理</h3><blockquote>
-<p>目前的功能制作基本上达成了正常使用的情况，什么叫正常使用呢？也就是这个程序不出BUG，如果我们搞一个BUG出来，你会发现程序马上崩溃掉。比如后台手工抛出一个异常，看看前端接收到的数据什么样子</p>
-</blockquote>
-<p>看来不仅要对正确的操作数据格式做处理，还要对错误的操作数据格式做同样的格式处理</p>
-<p>首先在当前的数据结果中添加消息字段，用来兼容后台出现的操作消息</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">Data</span></span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">R</span>&#123;</span><br><span class="line">    private <span class="title class_">Boolean</span> flag;</span><br><span class="line">    private <span class="title class_">Object</span> data;</span><br><span class="line">    private <span class="title class_">String</span> msg;    <span class="comment">//用于封装消息</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>后台代码也要根据情况做处理，当前是模拟的错误</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="type">Boolean</span> <span class="variable">flag</span> <span class="operator">=</span> bookService.insert(book);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(flag , flag ? <span class="string">&quot;添加成功^_^&quot;</span> : <span class="string">&quot;添加失败-_-!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后在表现层做统一的异常处理，使用SpringMVC提供的异常处理器做统一的异常处理</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">RestControllerAdvice</span></span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">ProjectExceptionAdvice</span> &#123;</span><br><span class="line">    @<span class="title class_">ExceptionHandler</span>(<span class="title class_">Exception</span>.<span class="property">class</span>)</span><br><span class="line">    public R <span class="title function_">doOtherException</span>(<span class="params">Exception ex</span>)&#123;</span><br><span class="line">        <span class="comment">//记录日志</span></span><br><span class="line">        <span class="comment">//发送消息给运维</span></span><br><span class="line">        <span class="comment">//发送邮件给开发人员,ex对象发送给开发人员</span></span><br><span class="line">        ex.<span class="title function_">printStackTrace</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">false</span>,<span class="literal">null</span>,<span class="string">&quot;系统错误，请稍后再试！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>页面上得到数据后，先判定是否有后台传递过来的消息，标志就是当前操作是否成功，如果返回操作结果false，就读取后台传递的消息</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line">handleAdd () &#123;</span><br><span class="line">  <span class="comment">//发送ajax请求</span></span><br><span class="line">    axios.<span class="title function_">post</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层，显示数据</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;添加成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(res.<span class="property">data</span>.<span class="property">msg</span>);      <span class="comment">//消息来自于后台传递过来，而非固定内容</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>使用注解@RestControllerAdvice定义SpringMVC异常处理器用来处理异常的</li>
-<li>异常处理器必须被扫描加载，否则无法生效</li>
-<li>表现层返回结果的模型类中添加消息属性用来传递消息到页面</li>
-</ol>
-<h1 id="七、页面-功能开发"><a href="#七、页面-功能开发" class="headerlink" title="七、页面 功能开发"></a>七、页面 功能开发</h1><h2 id="1-分页功能"><a href="#1-分页功能" class="headerlink" title="1.分页功能"></a>1.分页功能</h2><p>分页功能的制作用于替换前面的查询全部，其中要使用到elementUI提供的分页组件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--分页组件--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pagination-container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-pagination</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">class</span>=<span class="string">&quot;pagiantion&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:current-page</span>=<span class="string">&quot;pagination.currentPage&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:page-size</span>=<span class="string">&quot;pagination.pageSize&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">layout</span>=<span class="string">&quot;total, prev, pager, next, jumper&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:total</span>=<span class="string">&quot;pagination.total&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>为了配合分页组件，封装分页对应的数据模型</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">  <span class="attr">pagination</span>: &#123;  </span><br><span class="line">    <span class="comment">//分页相关模型数据</span></span><br><span class="line">    <span class="attr">currentPage</span>: <span class="number">1</span>,  <span class="comment">//当前页码</span></span><br><span class="line">    <span class="attr">pageSize</span>:<span class="number">10</span>,  <span class="comment">//每页显示的记录数</span></span><br><span class="line">    <span class="attr">total</span>:<span class="number">0</span>,    <span class="comment">//总记录数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>修改查询全部功能为分页查询，通过路径变量传递页码信息参数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>后台提供对应的分页功能</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">GetMapping</span>(<span class="string">&quot;/&#123;currentPage&#125;/&#123;pageSize&#125;&quot;</span>)</span><br><span class="line">public R <span class="title function_">getAll</span>(<span class="params">@PathVariable Integer currentPage,@PathVariable Integer pageSize</span>)&#123;</span><br><span class="line">    <span class="title class_">IPage</span>&lt;<span class="title class_">Book</span>&gt; pageBook = bookService.<span class="title function_">getPage</span>(currentPage, pageSize);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">null</span> != pageBook ,pageBook);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>页面根据分页操作结果读取对应数据，并进行数据模型绑定</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">total</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">current</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pagesize</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">size</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>对切换页码操作设置调用当前分页操作</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//切换页码</span></span><br><span class="line"><span class="title function_">handleCurrentChange</span>(<span class="params">currentPage</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> = currentPage;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结</strong></p>
-<ol>
-<li>使用el分页组件</li>
-<li>定义分页组件绑定的数据模型</li>
-<li>异步调用获取分页数据</li>
-<li>分页数据页面回显 &amp;#x20;</li>
-</ol>
-<h2 id="2-删除功能维护"><a href="#2-删除功能维护" class="headerlink" title="2.删除功能维护"></a>2.删除功能维护</h2><blockquote>
-<p>由于使用了分页功能，当最后一页只有一条数据时，删除操作就会出现BUG，最后一页无数据但是独立展示，对分页查询功能进行后台功能维护，如果当前页码值大于最大页码值，重新执行查询。其实这个问题解决方案很多，这里给出比较简单的一种处理方案</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">GetMapping</span>(<span class="string">&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;</span>)</span><br><span class="line">public R <span class="title function_">getPage</span>(<span class="params">@PathVariable int currentPage,@PathVariable int pageSize</span>)&#123;</span><br><span class="line">    <span class="title class_">IPage</span>&lt;<span class="title class_">Book</span>&gt; page = bookService.<span class="title function_">getPage</span>(currentPage, pageSize);</span><br><span class="line">    <span class="comment">//如果当前页码值大于了总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值</span></span><br><span class="line">    <span class="keyword">if</span>( currentPage &gt; page.<span class="title function_">getPages</span>())&#123;</span><br><span class="line">        page = bookService.<span class="title function_">getPage</span>((int)page.<span class="title function_">getPages</span>(), pageSize);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">true</span>, page);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-条件查询功能"><a href="#3-条件查询功能" class="headerlink" title="3.条件查询功能"></a>3.条件查询功能</h2><p>最后一个功能来做条件查询，其实条件查询可以理解为分页查询的时候除了携带分页数据再多带几个数据的查询。这些多带的数据就是查询条件。比较一下不带条件的分页查询与带条件的分页查询差别之处，这个功能就好做了</p>
-<ul>
-<li><p>页面封装的数据：带不带条件影响的仅仅是一次性传递到后台的数据总量，由传递2个分页相关的数据转换成2个分页数据加若干个条件</p>
-</li>
-<li><p>后台查询功能：查询时由不带条件，转换成带条件，反正不带条件的时候查询条件对象使用的是null，现在换成具体条件，差别不大</p>
-</li>
-<li><p>查询结果：不管带不带条件，出来的数据只是有数量上的差别，其他都差别，这个可以忽略</p>
-<p>经过上述分析，看来需要在页面发送请求的格式方面做一定的修改，后台的调用数据层操作时发送修改，其他没有区别</p>
-<p>页面发送请求时，两个分页数据仍然使用路径变量，其他条件采用动态拼装url参数的形式传递</p>
-</li>
-</ul>
-<p><strong>页面封装查询条件字段</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">pagination</span>: &#123;    </span><br><span class="line"><span class="comment">//分页相关模型数据</span></span><br><span class="line">  <span class="attr">currentPage</span>: <span class="number">1</span>,    <span class="comment">//当前页码</span></span><br><span class="line">  <span class="attr">pageSize</span>:<span class="number">10</span>,    <span class="comment">//每页显示的记录数</span></span><br><span class="line">  <span class="attr">total</span>:<span class="number">0</span>,      <span class="comment">//总记录数</span></span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>页面添加查询条件字段对应的数据模型绑定名称</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;filter-container&quot;</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书类别&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书名称&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.name&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书描述&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.description&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;getAll()&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dalfBut&quot;</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">class</span>=<span class="string">&quot;butT&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleCreate()&quot;</span>&gt;</span>新建<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将查询条件组织成url参数，添加到请求url地址中，这里可以借助其他类库快速开发，当前使用手工形式拼接，降低学习要求</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//1.获取查询条件,拼接查询条件</span></span><br><span class="line">    param = <span class="string">&quot;?name=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">name</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;type=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">type</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;description=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">description</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;-----------------&quot;</span>+ param);</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>+param).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>后台代码中定义实体类封查询条件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> R <span class="title function_">getAll</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize,Book book)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;参数=====&gt;&quot;</span>+book);</span><br><span class="line">    IPage&lt;Book&gt; pageBook = bookService.getPage(currentPage,pageSize);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">null</span> != pageBook ,pageBook);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对应业务层接口与实现类进行修正</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IBookService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;Book&gt; &#123;</span><br><span class="line">    IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(Integer currentPage,Integer pageSize,Book queryBook)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl2</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;BookDao,Book&gt; <span class="keyword">implements</span> <span class="title class_">IBookService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(Integer currentPage,Integer pageSize,Book queryBook)</span>&#123;</span><br><span class="line">        <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(currentPage,pageSize);</span><br><span class="line">        LambdaQueryWrapper&lt;Book&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;Book&gt;();</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getName()),Book::getName,queryBook.getName());</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getType()),Book::getType,queryBook.getType());</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getDescription()),Book::getDescription,queryBook.getDescription());</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectPage(page,lqw);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>页面回显数据</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">getAll() &#123;</span><br><span class="line">    <span class="comment">//1.获取查询条件,拼接查询条件</span></span><br><span class="line">    param = <span class="string">&quot;?name=&quot;</span>+<span class="built_in">this</span>.pagination.name;</span><br><span class="line">    param += <span class="string">&quot;&amp;type=&quot;</span>+<span class="built_in">this</span>.pagination.type;</span><br><span class="line">    param += <span class="string">&quot;&amp;description=&quot;</span>+<span class="built_in">this</span>.pagination.description;</span><br><span class="line">    console.log(<span class="string">&quot;-----------------&quot;</span>+ param);</span><br><span class="line">    axios.get(<span class="string">&quot;/books/&quot;</span>+<span class="built_in">this</span>.pagination.currentPage+<span class="string">&quot;/&quot;</span>+<span class="built_in">this</span>.pagination.pageSize+param).then((res) =&gt; &#123;</span><br><span class="line">        <span class="built_in">this</span>.pagination.total = res.data.data.total;</span><br><span class="line">        <span class="built_in">this</span>.pagination.currentPage = res.data.data.current;</span><br><span class="line">        <span class="built_in">this</span>.pagination.pagesize = res.data.data.size;</span><br><span class="line">        <span class="built_in">this</span>.dataList = res.data.data.records;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a><strong>总结</strong></h3><ol>
-<li>定义查询条件数据模型（当前封装到分页数据模型中）</li>
-<li>异步调用分页功能并通过请求参数传递数据到后台</li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>博客笔记</tag>
-        <tag>spring Boot</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java 学习路线</title>
@@ -3346,6 +3140,518 @@
       </categories>
       <tags>
         <tag>博客笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>springBoot整合第三方技术</title>
+    <url>/post/0.html</url>
+    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E4%B8%80%E6%95%B4%E5%90%88MyBatis">一、整合MyBatis</a><ul>
+<li><a href="#1%E5%88%9B%E5%BB%BA%E6%96%B0%E6%A8%A1%E5%9D%97">1.创建新模块</a><ul>
+<li><a href="#%E9%80%89%E6%8B%A9spring%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF">选择spring初始化，并配置模块相关基础信息</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">2.常见问题处理</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E6%95%B4%E5%90%88MyBatis-Plus">二.整合MyBatis-Plus</a><ul>
+<li><a href="#1%E6%89%8B%E5%8A%A8%E6%B7%BBspringBooot%E6%95%B4%E5%90%88MybatisPlus%E5%9D%90%E6%A0%87">1.手动添springBooot整合MybatisPlus坐标</a></li>
+<li><a href="#2%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E5%B1%82%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E7%BB%A7%E6%89%BFBaseMapper">2.定义数据层接口与映射配置，继承BaseMapper</a></li>
+<li><a href="#3%E5%90%8C%E6%95%B4%E5%90%88mybatis">3.同整合mybatis</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E6%95%B4%E5%90%88Druid">三、整合Druid</a><ul>
+<li><a href="#1%E5%AF%BC%E5%85%A5%E5%AF%B9%E5%BA%94%E7%9A%84starter">1.导入对应的starter</a></li>
+<li><a href="#2%E9%85%8D%E7%BD%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%88%96%E9%87%87%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE">2.配置对应的设置或采用默认配置</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="一、整合MyBatis"><a href="#一、整合MyBatis" class="headerlink" title="一、整合MyBatis"></a>一、整合MyBatis</h1><ul>
+<li>核心配置： 数据库连接相关信息</li>
+<li>映射配置：SQL映射（XML&#x2F;注解）</li>
+</ul>
+<h2 id="1-创建新模块"><a href="#1-创建新模块" class="headerlink" title="1.创建新模块"></a>1.创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
+<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
+<li>设置数据源参数</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+<p>4.定义数据层接口与映射配置</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.测试类注入接口，测试功能</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-常见问题处理"><a href="#2-常见问题处理" class="headerlink" title="2.常见问题处理"></a>2.常见问题处理</h2><ol>
+<li>MySQL 8.X驱动强制要求设置时区<ul>
+<li>修改url，添加serverTimezone设定</li>
+<li>修改MySQL数据库配置</li>
+</ul>
+</li>
+<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
+</ol>
+<h1 id="二-整合MyBatis-Plus"><a href="#二-整合MyBatis-Plus" class="headerlink" title="二.整合MyBatis-Plus"></a>二.整合MyBatis-Plus</h1><h2 id="1-手动添springBooot整合MybatisPlus坐标"><a href="#1-手动添springBooot整合MybatisPlus坐标" class="headerlink" title="1.手动添springBooot整合MybatisPlus坐标"></a>1.手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-定义数据层接口与映射配置，继承BaseMapper"><a href="#2-定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="2.定义数据层接口与映射配置，继承BaseMapper"></a>2.定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-同整合mybatis"><a href="#3-同整合mybatis" class="headerlink" title="3.同整合mybatis"></a>3.同整合mybatis</h2><h1 id="三、整合Druid"><a href="#三、整合Druid" class="headerlink" title="三、整合Druid"></a>三、整合Druid</h1><h2 id="1-导入对应的starter"><a href="#1-导入对应的starter" class="headerlink" title="1.导入对应的starter"></a>1.导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置对应的设置或采用默认配置"><a href="#2-配置对应的设置或采用默认配置" class="headerlink" title="2.配置对应的设置或采用默认配置"></a>2.配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>博客笔记</tag>
+        <tag>sppringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于springBoot的SSMP整合案例</title>
+    <url>/post/29c5a7c0.html</url>
+    <content><![CDATA[<h1 id="基于springBoot的SSMP整合案例"><a href="#基于springBoot的SSMP整合案例" class="headerlink" title="基于springBoot的SSMP整合案例"></a>基于springBoot的SSMP整合案例</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#SSMP%E6%95%B4%E5%90%88%E6%A1%88%E4%BE%8B">SSMP整合案例</a><ul>
+<li><a href="#0%E6%A8%A1%E5%9D%97%E5%88%9B%E5%BB%BA">0.模块创建</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%80%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%BC%80%E5%8F%91">一.实体类开发</a><ul>
+<li><a href="#1%E5%86%99%E4%B8%AA%E5%AE%9E%E4%BD%93%E7%B1%BB">1.写个实体类</a><ul>
+<li><a href="#Lombok">Lombok</a></li>
+<li><a href="#%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%88%B6%E4%BD%9C">实体类制作</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8lombok%E7%AE%80%E5%8C%96%E5%BC%80%E5%8F%91">使用lombok简化开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%BC%80%E5%8F%91">二、数据类开发</a><ul>
+<li><a href="#%E5%9F%BA%E7%A1%80CRUD">基础CRUD</a><ul>
+<li><a href="#1%E5%AF%BC%E5%85%A5%E4%BE%9D%E8%B5%96%E9%A9%B1%E5%8A%A8">1.导入依赖驱动</a></li>
+<li><a href="#2%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE">2.配置数据源配置</a></li>
+<li><a href="#3%E4%BD%BF%E7%94%A8MP%E7%9A%84%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%8E%A5%E5%8F%A3BaseMapper%E5%8A%A0%E9%80%9F%E5%BC%80%E5%8F%91">3.使用MP的标准通用接口BaseMapper加速开发</a></li>
+<li><a href="#4%E5%88%B6%E4%BD%9C%E6%B5%8B%E8%AF%95%E7%B1%BB%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C">4.制作测试类测试结果</a></li>
+<li><a href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA">温馨提示</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8BMP%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97">查看MP运行日志</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD%E5%88%B6%E4%BD%9C">分页功能制作</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89MP%E6%8B%A6%E6%88%AA%E5%99%A8%E5%B9%B6%E5%B0%86%E5%85%B6%E8%AE%BE%E7%BD%AE%E4%B8%BASpring%E7%AE%A1%E6%8E%A7%E7%9A%84bean">定义MP拦截器并将其设置为Spring管控的bean</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E5%8A%9F%E8%83%BD">条件查询功能</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E4%B8%9A%E5%8A%A1%E5%B1%82%E5%BC%80%E5%8F%91">三、业务层开发</a><ul>
+<li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91">快速开发</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E8%A1%A8%E7%8E%B0%E5%B1%82%E5%BC%80%E5%8F%91">四、表现层开发</a><ul>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E8%A1%A8%E7%8E%B0%E5%B1%82%E6%B6%88%E6%81%AF%E4%B8%80%E8%87%B4%E6%80%A7%E5%A4%84%E7%90%86">表现层消息一致性处理</a><ul>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E9%80%9A%E6%B5%8B%E8%AF%95">五、前后端联通测试</a></li>
+<li><a href="#%E5%85%AD%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91">六、页面基础功能开发</a><ul>
+<li><a href="#1%E5%88%97%E8%A1%A8%E5%8A%9F%E8%83%BD%E9%9D%9E%E5%88%86%E9%A1%B5%E7%89%88">1.列表功能（非分页版）</a><ul>
+<li><a href="#%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89">页面数据模型定义</a></li>
+<li><a href="#%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE">异步请求获取数据</a></li>
+</ul>
+</li>
+<li><a href="#2%E6%B7%BB%E5%8A%A0%E5%8A%9F%E8%83%BD">2.添加功能</a></li>
+<li><a href="#3%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD">3.删除功能</a></li>
+<li><a href="#4%E4%BF%AE%E6%94%B9%E5%8A%9F%E8%83%BD">4.修改功能</a></li>
+<li><a href="#5%E4%B8%9A%E5%8A%A1%E6%B6%88%E6%81%AF%E4%B8%80%E8%87%B4%E6%80%A7%E5%A4%84%E7%90%86">5.业务消息一致性处理</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83%E9%A1%B5%E9%9D%A2-%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91">七、页面 功能开发</a><ul>
+<li><a href="#1%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD">1.分页功能</a></li>
+<li><a href="#2%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD%E7%BB%B4%E6%8A%A4">2.删除功能维护</a></li>
+<li><a href="#3%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E5%8A%9F%E8%83%BD">3.条件查询功能</a><ul>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="SSMP整合案例"><a href="#SSMP整合案例" class="headerlink" title="SSMP整合案例"></a>SSMP整合案例</h1><ol>
+<li>实体类开发————使用Lombok快速制作实体类</li>
+<li>Dao开发————整合MyBatisPlus，制作数据层测试</li>
+<li>Service开发————基于MyBatisPlus进行增量开发，制作业务层测试类</li>
+<li>Controller开发————基于Restful开发，使用PostMan测试接口功能</li>
+<li>Controller开发————前后端开发协议制作</li>
+<li>页面开发————基于VUE+ElementUI制作，前后端联调，页面数据处理，页面消息处理<ul>
+<li>列表</li>
+<li>新增</li>
+<li>修改</li>
+<li>删除</li>
+<li>分页</li>
+<li>查询</li>
+</ul>
+</li>
+<li>项目异常处理</li>
+<li>按条件查询————页面功能调整、Controller修正功能、Service修正功能</li>
+</ol>
+<p>&amp;#x20;</p>
+<h2 id="0-模块创建"><a href="#0-模块创建" class="headerlink" title="0.模块创建"></a>0.模块创建</h2><p>创建一个新的模块，加载要使用的技术对应的starter，修改配置文件格式为yml格式</p>
+<h1 id="一-实体类开发"><a href="#一-实体类开发" class="headerlink" title="一.实体类开发"></a>一.实体类开发</h1><h2 id="1-写个实体类"><a href="#1-写个实体类" class="headerlink" title="1.写个实体类"></a>1.写个实体类</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Book</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String type;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String description;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lombok"><a href="#Lombok" class="headerlink" title="Lombok"></a>Lombok</h3><p>使用lombok可以通过一个注解@Data完成一个实体类对应的getter，setter，toString，equals，hashCode等操作的快速添加</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@ToString</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实体类制作"><a href="#实体类制作" class="headerlink" title="实体类制作"></a>实体类制作</h3><h3 id="使用lombok简化开发"><a href="#使用lombok简化开发" class="headerlink" title="使用lombok简化开发"></a>使用lombok简化开发</h3><ul>
+<li>导入lombok无需指定版本，由SpringBoot提供版本</li>
+<li>@Data注解</li>
+</ul>
+<h1 id="二、数据类开发"><a href="#二、数据类开发" class="headerlink" title="二、数据类开发"></a>二、数据类开发</h1><p>使用MyBatisPlus技术，数据源使用前面学习的Druid</p>
+<h2 id="基础CRUD"><a href="#基础CRUD" class="headerlink" title="基础CRUD"></a>基础CRUD</h2><h3 id="1-导入依赖驱动"><a href="#1-导入依赖驱动" class="headerlink" title="1.导入依赖驱动"></a>1.导入依赖驱动</h3><p>MyBatisPlus技术，数据源使用前面学习的Druid</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置数据源配置"><a href="#2-配置数据源配置" class="headerlink" title="2.配置数据源配置"></a>2.配置数据源配置</h3><p>yml文件</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 80</span><br><span class="line"></span><br><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 1123456</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-使用MP的标准通用接口BaseMapper加速开发"><a href="#3-使用MP的标准通用接口BaseMapper加速开发" class="headerlink" title="3.使用MP的标准通用接口BaseMapper加速开发"></a>3.使用MP的标准通用接口BaseMapper加速开发</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface BookDao extends BaseMapper<span class="tag">&lt;<span class="name">Book</span>&gt;</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-制作测试类测试结果"><a href="#4-制作测试类测试结果" class="headerlink" title="4.制作测试类测试结果"></a>4.制作测试类测试结果</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoTestCase</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetById</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(bookDao.selectById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testSave</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookDao.insert(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testUpdate</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setId(<span class="number">17</span>);</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据abcdefg&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookDao.updateById(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testDelete</span><span class="params">()</span>&#123;</span><br><span class="line">        bookDao.deleteById(<span class="number">16</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetAll</span><span class="params">()</span>&#123;</span><br><span class="line">        bookDao.selectList(<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a><strong>温馨提示</strong></h3><p>MP技术默认的主键生成策略为雪花算法，生成的主键ID长度较大，和目前的数据库设定规则不相符，需要配置一下使MP使用数据库的主键生成策略，方式嘛还是老一套，做配置。在application.yml中添加对应配置即可，具体如下</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 80</span><br><span class="line"></span><br><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm_db</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br><span class="line"></span><br><span class="line">mybatis-plus:</span><br><span class="line">  global-config:</span><br><span class="line">    db-config:</span><br><span class="line">      table-prefix: tbl_    #设置表名通用前缀</span><br><span class="line">      id-type: auto        #设置主键id字段的生成策略为参照数据库设定的策略，当前数据库设置id生成策略为自增</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看MP运行日志"><a href="#查看MP运行日志" class="headerlink" title="查看MP运行日志"></a>查看MP运行日志</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis-plus:</span><br><span class="line">  global-config:</span><br><span class="line">    db-config:</span><br><span class="line">      table-prefix: tbl_</span><br><span class="line">      id-type: auto</span><br><span class="line">  configuration:</span><br><span class="line">    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>总结</strong></p>
+<ol>
+<li>手工导入starter坐标（2个），mysql驱动（1个）</li>
+<li>配置数据源与MyBatisPlus对应的配置</li>
+<li>开发Dao接口（继承BaseMapper）</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>制作测试类测试Dao功能是否有效</li>
+<li>使用配置方式开启日志，设置日志输出方式为标准输出即可查阅SQL执行日志</li>
+</ol>
+<h2 id="分页功能制作"><a href="#分页功能制作" class="headerlink" title="分页功能制作"></a>分页功能制作</h2><p>MP提供的分页操作API如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">    bookDao.selectPage(page, <span class="literal">null</span>);</span><br><span class="line">    System.out.println(page.getCurrent());</span><br><span class="line">    System.out.println(page.getSize());</span><br><span class="line">    System.out.println(page.getTotal());</span><br><span class="line">    System.out.println(page.getPages());</span><br><span class="line">    System.out.println(page.getRecords());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>seletPage</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">   <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">   bookDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建此对象时就需要指定分页的两个基本数据</p>
+<ul>
+<li>当前显示第几页</li>
+<li>当前页有几条数据</li>
+</ul>
+<p>可以通过创建Page对象时利用构造方法初始化这两个数据</p>
+<p><code>IPage page = new Page(2,5);</code></p>
+<p>将该对象传入到查询方法selectPage后，可以得到查询结果，但是我们会发现当前操作查询结果返回值仍然是一个IPage对象，这又是怎么回事？</p>
+<p><code>IPage page = bookDao.selectPage(page, null);IPage page = bookDao.selectPage(page, null);</code></p>
+<p>原来这个IPage对象中封装了若干个数据，而查询的结果作为IPage对象封装的一个数据存在的</p>
+<h3 id="定义MP拦截器并将其设置为Spring管控的bean"><a href="#定义MP拦截器并将其设置为Spring管控的bean" class="headerlink" title="定义MP拦截器并将其设置为Spring管控的bean"></a><strong>定义MP拦截器并将其设置为Spring管控的bean</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MPConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上述代码第一行是创建MP的拦截器栈，这个时候拦截器栈中没有具体的拦截器，第二行是初始化了分页拦截器，并添加到拦截器栈中。如果后期开发其他功能，需要添加全新的拦截器，按照第二行的格式继续add进去新的拦截器就可以了。</p>
+</blockquote>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>使用IPage封装分页数据</li>
+<li>分页操作依赖MyBatisPlus分页拦截器实现功能</li>
+<li>借助MyBatisPlus日志查阅执行SQL语句</li>
+</ol>
+<h2 id="条件查询功能"><a href="#条件查询功能" class="headerlink" title="条件查询功能"></a>条件查询功能</h2><ul>
+<li>使用QeryWrapper对象封装查询条件推荐使用LambdaQuery  W rapper对象</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">testGetBy2</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;1&quot;</span>;</span><br><span class="line">    LambdaQueryWrapper&lt;Book&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;Book&gt;();</span><br><span class="line">    <span class="comment">//if(name != null) lqw.like(Book::getName,name);    //方式一：JAVA代码控制</span></span><br><span class="line">    lqw.like(name != <span class="literal">null</span>,Book::getName,name);        <span class="comment">//方式二：API接口提供控制开关</span></span><br><span class="line">    bookDao.selectList(lqw);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>支持动态拼写查询条件</li>
+</ul>
+<p><code>lqw.like(``String.isNotEmpty(name)``,Book: :getName,&quot;Spring&quot;);</code></p>
+<p><strong>总结</strong></p>
+<ol>
+<li>使用QueryWrapper对象封装查询条件</li>
+<li>推荐使用LambdaQueryWrapper对象</li>
+<li>所有查询操作封装成方法调用</li>
+<li>查询条件支持动态条件拼装</li>
+</ol>
+<h1 id="三、业务层开发"><a href="#三、业务层开发" class="headerlink" title="三、业务层开发"></a>三、业务层开发</h1><blockquote>
+<p>📌组织业务逻辑功能，并根据业务需求，对数据持久层发起调用</p>
+</blockquote>
+<blockquote>
+<p>业务层的方法名定义一定要与业务有关，例如登录操作</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">login(String username,String password);</span><br></pre></td></tr></table></figure>
+
+<p>业务层接口定义如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookService</span> &#123;</span><br><span class="line">    Boolean <span class="title function_">save</span><span class="params">(Book book)</span>;</span><br><span class="line">    Boolean <span class="title function_">update</span><span class="params">(Book book)</span>;</span><br><span class="line">    Boolean <span class="title function_">delete</span><span class="params">(Integer id)</span>;</span><br><span class="line">    Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">    List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span>;</span><br><span class="line">    IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="type">int</span> currentPage,<span class="type">int</span> pageSize)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>业务层实现类如下，转调数据层即可</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">BookService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(Book book)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.insert(book) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">update</span><span class="params">(Book book)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.updateById(book) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.deleteById(id) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectById(id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectList(<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="type">int</span> currentPage, <span class="type">int</span> pageSize)</span> &#123;</span><br><span class="line">        <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(currentPage,pageSize);</span><br><span class="line">        bookDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>业务层接口进行测试，测试类如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookService  bookService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetById</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(bookService.getById(<span class="number">4</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testSave</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookService.save(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testUpdate</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">Book</span> <span class="variable">book</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">        book.setId(<span class="number">10</span>);</span><br><span class="line">        book.setType(<span class="string">&quot;测试数据abcd&quot;</span>);</span><br><span class="line">        book.setName(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        book.setDescription(<span class="string">&quot;测试数据123&quot;</span>);</span><br><span class="line">        bookService.update(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testDelete</span><span class="params">()</span>&#123;</span><br><span class="line">        bookService.delete(<span class="number">13</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span>  <span class="title function_">testGetAll</span><span class="params">()</span>&#123;</span><br><span class="line">        bookService.getAll();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testGetPage</span><span class="params">()</span>&#123;</span><br><span class="line">       IPage&lt;Book&gt; page =bookService.getPage(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(page.getCurrent());</span><br><span class="line">        System.out.println(page.getSize());</span><br><span class="line">        System.out.println(page.getTotal());</span><br><span class="line">        System.out.println(page.getPages());</span><br><span class="line">        System.out.println(page.getRecords());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>Service接口名称定义成业务名称，并与Dao接口名称进行区分</li>
+<li>制作测试类测试Service功能是否有效</li>
+</ol>
+<h2 id="快速开发"><a href="#快速开发" class="headerlink" title="快速开发"></a>快速开发</h2><p>其实MP技术不仅提供了数据层快速开发方案，业务层MP也给了一个通用接口，个人观点不推荐使用，凑合能用吧，其实就是一个封装+继承的思想，代码给出，实际开发慎用</p>
+<p>业务层接口快速开发</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IBookService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;Book&gt; &#123;</span><br><span class="line">    <span class="comment">//添加非通用操作API接口</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>业务层接口实现类快速开发，关注继承的类需要传入两个泛型，一个是数据层接口，另一个是实体类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;BookDao, Book&gt; <span class="keyword">implements</span> <span class="title class_">IBookService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line">  <span class="comment">//添加非通用操作API</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>使用通用接口（ISerivce&lt;T&gt;）快速开发Service</li>
+<li>使用通用实现类（ServiceImpl&lt;M,T&gt;）快速开发ServiceImpl</li>
+<li>可以在通用接口基础上做功能重载或功能追加</li>
+<li>注意重载时不要覆盖原始操作，避免原始提供的功能丢失</li>
+</ol>
+<h1 id="四、表现层开发"><a href="#四、表现层开发" class="headerlink" title="四、表现层开发"></a>四、表现层开发</h1><p>基于Restful的表现层接口开发，功能测试通过Postman工具进行</p>
+<p>表现层接口如下:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/books&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBookService bookService;</span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Book&gt; <span class="title function_">getAll</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bookService.list();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.save(book);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PutMapping</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.modify(book);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.delete(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.getById(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bookService.getPage(currentPage,pageSize);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a><strong>总结</strong></h3><ol>
+<li>基于Restful制作表现层接口<ul>
+<li>新增：POST</li>
+<li>删除：DELETE</li>
+<li>修改：PUT</li>
+<li>查询：GET</li>
+</ul>
+</li>
+<li>接收参数<ul>
+<li>实体数据：@RequestBody</li>
+<li>路径变量：@PathVariable</li>
+</ul>
+</li>
+</ol>
+<h2 id="表现层消息一致性处理"><a href="#表现层消息一致性处理" class="headerlink" title="表现层消息一致性处理"></a>表现层消息一致性处理</h2><p>目前我们通过Postman测试后业务层接口功能时通的，但是这样的结果给到前端开发者会出现一个小问题。不同的操作结果所展示的数据格式差异化严重</p>
+<p>每种不同操作返回的数据格式都不一样，而且还不知道以后还会有什么格式，这样的结果让前端人员看了是很容易让人崩溃的，必须将所有操作的操作结果数据格式统一起来，需要设计表现层返回结果的模型类，用于后端与前端进行数据格式统一，也称为<strong>前后端数据协议</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">R</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Boolean flag;</span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中flag用于标识操作是否成功，data用于封装操作数据，现在的数据格式就变了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;flag&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;data&quot;</span>:&#123;</span><br><span class="line">        <span class="string">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;type&quot;</span>: <span class="string">&quot;计算机理论&quot;</span>,</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Spring实战 第5版&quot;</span>,</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Spring入门经典教程&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>表现层开发格式也需要转换一下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/books&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookController</span> &#123;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBookService bookService;</span><br><span class="line">   <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getAll</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.list());</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line"><span class="comment">//       R r =new R();</span></span><br><span class="line"><span class="comment">//       boolean flag =  bookService.save(book);</span></span><br><span class="line"><span class="comment">//       r.setFlag(flag);</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.save(book));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@PutMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.modify(book));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.delete(id));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getById</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>   <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.getById(id));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize)</span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span>   <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,getPage(currentPage,pageSize));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a><strong>总结</strong></h4><ol>
+<li>设计统一的返回值结果类型便于前端开发读取数据</li>
+<li>返回值结果类型可以根据需求自行设定，没有固定格式</li>
+<li>返回值结果模型类用于后端与前端进行数据格式统一，也称为前后端数据协议</li>
+</ol>
+<h1 id="五、前后端联通测试"><a href="#五、前后端联通测试" class="headerlink" title="五、前后端联通测试"></a>五、前后端联通测试</h1><p>后端的表现层接口开发完毕，就可以进行前端的开发了</p>
+<p>将前端人员开发的页面保存到lresources目录下的static目录中，建议执行maven的clean生命周期，避免缓存的问题出现。</p>
+<ul>
+<li>在进行具体的功能开发之前，先做联通性的测试，通过页面发送异步提交（axios），这一步调试通过后再进行进一步的功能开发</li>
+<li></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//列表</span></span><br><span class="line">getAll() &#123;</span><br><span class="line">  axios.get(<span class="string">&quot;/books&quot;</span>).then((res)=&gt;&#123;</span><br><span class="line">    console.log(res.data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只要后台代码能够正常工作，前端能够在日志中接收到数据，就证明前后端是通的，也就可以进行下一步的功能开发了</li>
+</ul>
+<p><strong>总结</strong></p>
+<ol>
+<li>单体项目中页面放置在resources&#x2F;static目录下</li>
+<li>created钩子函数用于初始化页面时发起调用</li>
+<li>页面使用axios发送异步请求获取数据后确认前后端是否联通</li>
+</ol>
+<h1 id="六、页面基础功能开发"><a href="#六、页面基础功能开发" class="headerlink" title="六、页面基础功能开发"></a>六、页面基础功能开发</h1><h3 id="1-列表功能（非分页版）"><a href="#1-列表功能（非分页版）" class="headerlink" title="1.列表功能（非分页版）"></a>1.列表功能（非分页版）</h3><p>列表功能主要操作就是加载完数据，将数据展示到页面上，此处要利用VUE的数据模型绑定，发送请求得到数据，然后页面上读取指定数据即可</p>
+<h4 id="页面数据模型定义"><a href="#页面数据模型定义" class="headerlink" title="页面数据模型定义"></a><strong>页面数据模型定义</strong></h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">data:&#123;</span><br><span class="line">  dataList: [],<span class="comment">//当前页要展示的列表数据</span></span><br><span class="line">  ...</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="异步请求获取数据"><a href="#异步请求获取数据" class="headerlink" title="异步请求获取数据"></a>异步请求获取数据</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//列表</span></span><br><span class="line">getAll() &#123;</span><br><span class="line">    axios.get(<span class="string">&quot;/books&quot;</span>).then((res)=&gt;&#123;</span><br><span class="line">        <span class="built_in">this</span>.dataList = res.data.data;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这样在页面加载时就可以获取到数据，并且由VUE将数据展示到页面上了</p>
+<p>总结：</p>
+<ol>
+<li>将查询数据返回到页面，利用前端数据绑定进行数据展示</li>
+</ol>
+<h3 id="2-添加功能"><a href="#2-添加功能" class="headerlink" title="2.添加功能"></a>2.添加功能</h3><blockquote>
+<p>添加功能用于收集数据的表单是通过一个弹窗展示的，因此在添加操作前首先要进行弹窗的展示，添加后隐藏弹窗即可。因为这个弹窗一直存在，因此当页面加载时首先设置这个弹窗为不可显示状态，需要展示，切换状态即可</p>
+</blockquote>
+<p><strong>默认状态</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data:&#123;</span><br><span class="line">  dialogFormVisible: false,//添加表单是否可见</span><br><span class="line">  ...</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>切换为显示状态</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//弹出添加窗口</span><br><span class="line">handleCreate() &#123;</span><br><span class="line">  this.dialogFormVisible = true;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>由于每次添加数据都是使用同一个弹窗录入数据，所以每次操作的痕迹将在下一次操作时展示出来，需要在每次操作之前清理掉上次操作的痕迹</p>
+</blockquote>
+<p><strong>定义清理数据操作</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重置表单</span></span><br><span class="line"><span class="title function_">resetForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">formData</span> = &#123;&#125;;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>切换弹窗状态时清理数据</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//弹出添加窗口</span></span><br><span class="line"><span class="title function_">handleCreate</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">true</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">resetForm</span>();</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>添加操作</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line">handleAdd () &#123;</span><br><span class="line">    <span class="comment">//发送异步请求</span></span><br><span class="line">    axios.<span class="title function_">post</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层，显示数据</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;添加成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;添加失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>将要保存的数据传递到后台，通过post请求的第二个参数传递json数据到后台</li>
+<li>根据返回的操作结果决定下一步操作<ul>
+<li>如何是true就关闭添加窗口，显示添加成功的消息</li>
+<li>如果是false保留添加窗口，显示添加失败的消息</li>
+</ul>
+</li>
+<li>无论添加是否成功，页面均进行刷新，动态加载数据（对getAll操作发起调用）</li>
+</ol>
+<p><strong>取消添加操作</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取消</span></span><br><span class="line"><span class="title function_">cancel</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">info</span>(<span class="string">&quot;操作取消&quot;</span>);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>请求方式使用POST调用后台对应操作</li>
+<li>添加操作结束后动态刷新页面加载数据</li>
+<li>根据操作结果不同，显示对应的提示信息</li>
+<li>弹出添加Div时清除表单数据</li>
+</ol>
+<h3 id="3-删除功能"><a href="#3-删除功能" class="headerlink" title="3.删除功能"></a>3.删除功能</h3><blockquote>
+<p>模仿添加操作制作删除功能，差别之处在于删除操作仅传递一个待删除的数据id到后台即可</p>
+</blockquote>
+<p><strong>删除操作</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="title function_">handleDelete</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    axios.<span class="title function_">delete</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除操作提示信息</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="title function_">handleDelete</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    <span class="comment">//1.弹出提示框</span></span><br><span class="line">    <span class="variable language_">this</span>.$confirm(<span class="string">&quot;此操作永久删除当前数据，是否继续？&quot;</span>,<span class="string">&quot;提示&quot;</span>,&#123;</span><br><span class="line">        <span class="attr">type</span>:<span class="string">&#x27;info&#x27;</span></span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//2.做删除业务</span></span><br><span class="line">        axios.<span class="title function_">delete</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">           <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">              <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//3.取消删除</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">info</span>(<span class="string">&quot;取消删除操作&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;，  </span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>请求方式使用Delete调用后台对应操作</li>
+<li>删除操作需要传递当前行数据对应的id值到后台</li>
+<li>删除操作结束后动态刷新页面加载数据</li>
+<li>根据操作结果不同，显示对应的提示信息</li>
+<li>删除操作前弹出提示框避免误操作</li>
+</ol>
+<h3 id="4-修改功能"><a href="#4-修改功能" class="headerlink" title="4.修改功能"></a>4.修改功能</h3><p>修改功能可以说是列表功能、删除功能与添加功能的合体</p>
+<p>几个相似点如下：</p>
+<ol>
+<li><p>页面也需要有一个弹窗用来加载修改的数据，这一点与添加相同，都是要弹窗</p>
+</li>
+<li><p>弹出窗口中要加载待修改的数据，而数据需要通过查询得到，这一点与查询全部相同，都是要查数据</p>
+</li>
+<li><p>查询操作需要将要修改的数据id发送到后台，这一点与删除相同，都是传递id到后台</p>
+</li>
+<li><p>查询得到数据后需要展示到弹窗中，这一点与查询全部相同，都是要通过数据模型绑定展示数据</p>
+</li>
+<li><p>修改数据时需要将被修改的数据传递到后台，这一点与添加相同，都是要传递数据</p>
+<p>所以整体上来看，修改功能就是前面几个功能的大合体</p>
+</li>
+</ol>
+<p><strong>查询并展示数据</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//弹出编辑窗口</span></span><br><span class="line"><span class="title function_">handleUpdate</span>(<span class="params">row</span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+row.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="comment">//展示弹层，加载数据</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">formData</span> = res.<span class="property">data</span>.<span class="property">data</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible4Edit</span> = <span class="literal">true</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;数据同步失败，自动刷新&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改操作</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//修改</span></span><br><span class="line"><span class="title function_">handleEdit</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">put</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层并刷新页面</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible4Edit</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;修改成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&quot;修改失败，请重试&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>加载要修改数据通过传递当前行数据对应的id值到后台查询数据（同删除与查询全部）</li>
+<li>利用前端双向数据绑定将查询到的数据进行回显（同查询全部）</li>
+<li>请求方式使用PUT调用后台对应操作（同新增传递数据）</li>
+<li>修改操作结束后动态刷新页面加载数据（同新增）</li>
+<li>根据操作结果不同，显示对应的提示信息（同新增）</li>
+</ol>
+<h3 id="5-业务消息一致性处理"><a href="#5-业务消息一致性处理" class="headerlink" title="5.业务消息一致性处理"></a>5.业务消息一致性处理</h3><blockquote>
+<p>目前的功能制作基本上达成了正常使用的情况，什么叫正常使用呢？也就是这个程序不出BUG，如果我们搞一个BUG出来，你会发现程序马上崩溃掉。比如后台手工抛出一个异常，看看前端接收到的数据什么样子</p>
+</blockquote>
+<p>看来不仅要对正确的操作数据格式做处理，还要对错误的操作数据格式做同样的格式处理</p>
+<p>首先在当前的数据结果中添加消息字段，用来兼容后台出现的操作消息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">Data</span></span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">R</span>&#123;</span><br><span class="line">    private <span class="title class_">Boolean</span> flag;</span><br><span class="line">    private <span class="title class_">Object</span> data;</span><br><span class="line">    private <span class="title class_">String</span> msg;    <span class="comment">//用于封装消息</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后台代码也要根据情况做处理，当前是模拟的错误</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="type">Boolean</span> <span class="variable">flag</span> <span class="operator">=</span> bookService.insert(book);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(flag , flag ? <span class="string">&quot;添加成功^_^&quot;</span> : <span class="string">&quot;添加失败-_-!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在表现层做统一的异常处理，使用SpringMVC提供的异常处理器做统一的异常处理</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">RestControllerAdvice</span></span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">ProjectExceptionAdvice</span> &#123;</span><br><span class="line">    @<span class="title class_">ExceptionHandler</span>(<span class="title class_">Exception</span>.<span class="property">class</span>)</span><br><span class="line">    public R <span class="title function_">doOtherException</span>(<span class="params">Exception ex</span>)&#123;</span><br><span class="line">        <span class="comment">//记录日志</span></span><br><span class="line">        <span class="comment">//发送消息给运维</span></span><br><span class="line">        <span class="comment">//发送邮件给开发人员,ex对象发送给开发人员</span></span><br><span class="line">        ex.<span class="title function_">printStackTrace</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">false</span>,<span class="literal">null</span>,<span class="string">&quot;系统错误，请稍后再试！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>页面上得到数据后，先判定是否有后台传递过来的消息，标志就是当前操作是否成功，如果返回操作结果false，就读取后台传递的消息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line">handleAdd () &#123;</span><br><span class="line">  <span class="comment">//发送ajax请求</span></span><br><span class="line">    axios.<span class="title function_">post</span>(<span class="string">&quot;/books&quot;</span>,<span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//如果操作成功，关闭弹层，显示数据</span></span><br><span class="line">        <span class="keyword">if</span>(res.<span class="property">data</span>.<span class="property">flag</span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(<span class="string">&quot;添加成功&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(res.<span class="property">data</span>.<span class="property">msg</span>);      <span class="comment">//消息来自于后台传递过来，而非固定内容</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>使用注解@RestControllerAdvice定义SpringMVC异常处理器用来处理异常的</li>
+<li>异常处理器必须被扫描加载，否则无法生效</li>
+<li>表现层返回结果的模型类中添加消息属性用来传递消息到页面</li>
+</ol>
+<h1 id="七、页面-功能开发"><a href="#七、页面-功能开发" class="headerlink" title="七、页面 功能开发"></a>七、页面 功能开发</h1><h2 id="1-分页功能"><a href="#1-分页功能" class="headerlink" title="1.分页功能"></a>1.分页功能</h2><p>分页功能的制作用于替换前面的查询全部，其中要使用到elementUI提供的分页组件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--分页组件--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pagination-container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-pagination</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">class</span>=<span class="string">&quot;pagiantion&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:current-page</span>=<span class="string">&quot;pagination.currentPage&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:page-size</span>=<span class="string">&quot;pagination.pageSize&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">layout</span>=<span class="string">&quot;total, prev, pager, next, jumper&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:total</span>=<span class="string">&quot;pagination.total&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>为了配合分页组件，封装分页对应的数据模型</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">  <span class="attr">pagination</span>: &#123;  </span><br><span class="line">    <span class="comment">//分页相关模型数据</span></span><br><span class="line">    <span class="attr">currentPage</span>: <span class="number">1</span>,  <span class="comment">//当前页码</span></span><br><span class="line">    <span class="attr">pageSize</span>:<span class="number">10</span>,  <span class="comment">//每页显示的记录数</span></span><br><span class="line">    <span class="attr">total</span>:<span class="number">0</span>,    <span class="comment">//总记录数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>修改查询全部功能为分页查询，通过路径变量传递页码信息参数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>后台提供对应的分页功能</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">GetMapping</span>(<span class="string">&quot;/&#123;currentPage&#125;/&#123;pageSize&#125;&quot;</span>)</span><br><span class="line">public R <span class="title function_">getAll</span>(<span class="params">@PathVariable Integer currentPage,@PathVariable Integer pageSize</span>)&#123;</span><br><span class="line">    <span class="title class_">IPage</span>&lt;<span class="title class_">Book</span>&gt; pageBook = bookService.<span class="title function_">getPage</span>(currentPage, pageSize);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">null</span> != pageBook ,pageBook);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>页面根据分页操作结果读取对应数据，并进行数据模型绑定</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">total</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">current</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pagesize</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">size</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>对切换页码操作设置调用当前分页操作</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//切换页码</span></span><br><span class="line"><span class="title function_">handleCurrentChange</span>(<span class="params">currentPage</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> = currentPage;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ol>
+<li>使用el分页组件</li>
+<li>定义分页组件绑定的数据模型</li>
+<li>异步调用获取分页数据</li>
+<li>分页数据页面回显 &amp;#x20;</li>
+</ol>
+<h2 id="2-删除功能维护"><a href="#2-删除功能维护" class="headerlink" title="2.删除功能维护"></a>2.删除功能维护</h2><blockquote>
+<p>由于使用了分页功能，当最后一页只有一条数据时，删除操作就会出现BUG，最后一页无数据但是独立展示，对分页查询功能进行后台功能维护，如果当前页码值大于最大页码值，重新执行查询。其实这个问题解决方案很多，这里给出比较简单的一种处理方案</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="title class_">GetMapping</span>(<span class="string">&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;</span>)</span><br><span class="line">public R <span class="title function_">getPage</span>(<span class="params">@PathVariable int currentPage,@PathVariable int pageSize</span>)&#123;</span><br><span class="line">    <span class="title class_">IPage</span>&lt;<span class="title class_">Book</span>&gt; page = bookService.<span class="title function_">getPage</span>(currentPage, pageSize);</span><br><span class="line">    <span class="comment">//如果当前页码值大于了总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值</span></span><br><span class="line">    <span class="keyword">if</span>( currentPage &gt; page.<span class="title function_">getPages</span>())&#123;</span><br><span class="line">        page = bookService.<span class="title function_">getPage</span>((int)page.<span class="title function_">getPages</span>(), pageSize);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">R</span>(<span class="literal">true</span>, page);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-条件查询功能"><a href="#3-条件查询功能" class="headerlink" title="3.条件查询功能"></a>3.条件查询功能</h2><p>最后一个功能来做条件查询，其实条件查询可以理解为分页查询的时候除了携带分页数据再多带几个数据的查询。这些多带的数据就是查询条件。比较一下不带条件的分页查询与带条件的分页查询差别之处，这个功能就好做了</p>
+<ul>
+<li><p>页面封装的数据：带不带条件影响的仅仅是一次性传递到后台的数据总量，由传递2个分页相关的数据转换成2个分页数据加若干个条件</p>
+</li>
+<li><p>后台查询功能：查询时由不带条件，转换成带条件，反正不带条件的时候查询条件对象使用的是null，现在换成具体条件，差别不大</p>
+</li>
+<li><p>查询结果：不管带不带条件，出来的数据只是有数量上的差别，其他都差别，这个可以忽略</p>
+<p>经过上述分析，看来需要在页面发送请求的格式方面做一定的修改，后台的调用数据层操作时发送修改，其他没有区别</p>
+<p>页面发送请求时，两个分页数据仍然使用路径变量，其他条件采用动态拼装url参数的形式传递</p>
+</li>
+</ul>
+<p><strong>页面封装查询条件字段</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">pagination</span>: &#123;    </span><br><span class="line"><span class="comment">//分页相关模型数据</span></span><br><span class="line">  <span class="attr">currentPage</span>: <span class="number">1</span>,    <span class="comment">//当前页码</span></span><br><span class="line">  <span class="attr">pageSize</span>:<span class="number">10</span>,    <span class="comment">//每页显示的记录数</span></span><br><span class="line">  <span class="attr">total</span>:<span class="number">0</span>,      <span class="comment">//总记录数</span></span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>页面添加查询条件字段对应的数据模型绑定名称</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;filter-container&quot;</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书类别&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书名称&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.name&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书描述&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.description&quot;</span> <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>/&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;getAll()&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dalfBut&quot;</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">class</span>=<span class="string">&quot;butT&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleCreate()&quot;</span>&gt;</span>新建<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将查询条件组织成url参数，添加到请求url地址中，这里可以借助其他类库快速开发，当前使用手工形式拼接，降低学习要求</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//1.获取查询条件,拼接查询条件</span></span><br><span class="line">    param = <span class="string">&quot;?name=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">name</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;type=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">type</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;description=&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">description</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;-----------------&quot;</span>+ param);</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>+param).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>后台代码中定义实体类封查询条件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> R <span class="title function_">getAll</span><span class="params">(<span class="meta">@PathVariable</span> <span class="type">int</span> currentPage,<span class="meta">@PathVariable</span> <span class="type">int</span> pageSize,Book book)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;参数=====&gt;&quot;</span>+book);</span><br><span class="line">    IPage&lt;Book&gt; pageBook = bookService.getPage(currentPage,pageSize);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">null</span> != pageBook ,pageBook);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对应业务层接口与实现类进行修正</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IBookService</span> <span class="keyword">extends</span> <span class="title class_">IService</span>&lt;Book&gt; &#123;</span><br><span class="line">    IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(Integer currentPage,Integer pageSize,Book queryBook)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl2</span> <span class="keyword">extends</span> <span class="title class_">ServiceImpl</span>&lt;BookDao,Book&gt; <span class="keyword">implements</span> <span class="title class_">IBookService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> IPage&lt;Book&gt; <span class="title function_">getPage</span><span class="params">(Integer currentPage,Integer pageSize,Book queryBook)</span>&#123;</span><br><span class="line">        <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(currentPage,pageSize);</span><br><span class="line">        LambdaQueryWrapper&lt;Book&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;Book&gt;();</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getName()),Book::getName,queryBook.getName());</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getType()),Book::getType,queryBook.getType());</span><br><span class="line">        lqw.like(Strings.isNotEmpty(queryBook.getDescription()),Book::getDescription,queryBook.getDescription());</span><br><span class="line">        <span class="keyword">return</span> bookDao.selectPage(page,lqw);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>页面回显数据</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">getAll() &#123;</span><br><span class="line">    <span class="comment">//1.获取查询条件,拼接查询条件</span></span><br><span class="line">    param = <span class="string">&quot;?name=&quot;</span>+<span class="built_in">this</span>.pagination.name;</span><br><span class="line">    param += <span class="string">&quot;&amp;type=&quot;</span>+<span class="built_in">this</span>.pagination.type;</span><br><span class="line">    param += <span class="string">&quot;&amp;description=&quot;</span>+<span class="built_in">this</span>.pagination.description;</span><br><span class="line">    console.log(<span class="string">&quot;-----------------&quot;</span>+ param);</span><br><span class="line">    axios.get(<span class="string">&quot;/books/&quot;</span>+<span class="built_in">this</span>.pagination.currentPage+<span class="string">&quot;/&quot;</span>+<span class="built_in">this</span>.pagination.pageSize+param).then((res) =&gt; &#123;</span><br><span class="line">        <span class="built_in">this</span>.pagination.total = res.data.data.total;</span><br><span class="line">        <span class="built_in">this</span>.pagination.currentPage = res.data.data.current;</span><br><span class="line">        <span class="built_in">this</span>.pagination.pagesize = res.data.data.size;</span><br><span class="line">        <span class="built_in">this</span>.dataList = res.data.data.records;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a><strong>总结</strong></h3><ol>
+<li>定义查询条件数据模型（当前封装到分页数据模型中）</li>
+<li>异步调用分页功能并通过请求参数传递数据到后台</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>博客笔记</tag>
+        <tag>spring Boot</tag>
       </tags>
   </entry>
 </search>
